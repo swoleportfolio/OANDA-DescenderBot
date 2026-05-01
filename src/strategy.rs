@@ -1,5 +1,8 @@
 
-use std::collections:HashSet;
+// TODO: Connect the strat to the api?
+// Get the actual strategy implemented on the exchange.
+
+use std::collections::HashSet;
 
 // actions I can take in the trade
 enum OrderSide {
@@ -71,3 +74,7 @@ impl TradeInput {
 // mark level as exectuted
 // return all new orders.
 
+
+use request::Client; // imports client type so can make HTTPS requests for API
+use std::env;        // lets us access environment variables, allows access to api keys etc.
+use serde::Deserialize; // used to convert JSON/Rust back n forth.
